@@ -1,0 +1,138 @@
+.slide-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #a6ffcb, #12d8fa, #1fa2ff);
+  }
+  
+  .arrow {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.219);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    z-index: 2;    
+  }
+  
+  .arrow:hover {
+    background: black;
+  }
+  .left-arrow{
+    margin-left: 20px;
+  }
+  .right-arrow{
+    margin-left: 1280px;
+  }
+  .slide-wrapper {
+    height: 100%;
+    display: flex;
+    transition: all 1.5s ease;
+  }
+  
+  .slide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .slide-imgContainer {
+    height: 100%;
+    flex: 1;
+  }
+  
+  .slide-imgContainer img {
+    height: 80%;
+    margin-left: 100px;
+  }
+  
+  .infoContainer {
+    flex: 1;
+    padding: 50px;
+  }
+  
+  .lettermove {
+    font-size: 60px;
+    font-weight: 600;
+    color: white;    
+  }
+  
+  .infoContainer .title {
+    font-size: 70px;
+  }
+  
+  .infoContainer .desc {
+    margin: 50px 0px;
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 3px;
+  }
+  
+  .slide-button {
+    outline: 0;
+    border: 0;
+    height: 50px;
+    width: 180px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    background: #8e2de2;    
+    flex-grow: 1;
+  }
+  
+  .slide-button:hover {
+    background: black;
+    border: none;
+  }
+  @media screen and (max-width : 648px) {
+     .slide-imgContainer img{      
+      width: 250px;
+      height: 250px;
+      margin-top: 50px;
+      margin-left: 10px;
+     }
+     .lettermove{
+      font-size: 40px;
+     }
+     .infoContainer{
+      margin-right: -40px;            
+      width: 400px;
+     }
+     .infoContainer .desc{
+      font-size: 15px;
+     }
+     .slide{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+     }
+     .slide-button{
+      margin-left: 45px;
+     }
+     .right-arrow{
+      margin-left: 330px;
+      background-color: rgba(255, 255, 255, 0.219);      
+     }
+     .left-arrow{
+      background-color: rgba(255, 255, 255, 0.219);
+     }
+
+     
+  }
+  
+  

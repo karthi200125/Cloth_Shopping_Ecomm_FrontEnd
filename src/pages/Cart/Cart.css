@@ -1,0 +1,128 @@
+.cart-wrapper{
+    padding: 20px;
+}
+.cart-wrapper h1{
+    font-weight: 300;
+  text-align: center;
+}
+.cart-top{
+    display: flex;
+  border-bottom : 1px solid lightgrey;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.cart-top button{
+    padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+}
+.cart-top button.filled {
+    background-color: black;
+    color: white;    
+  }
+  .procart{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+  }  
+.cart-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-pro{
+    display: flex;
+  justify-content: space-between;    
+}
+.cart-pro-de{
+    flex: 2;
+  display: flex;    
+}
+.detail{
+    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+.cart-pro-color{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.pricede{
+    flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.btn{
+    width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn:hover{
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+}
+.si{
+    margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.sum{
+    flex: 1;
+  margin-top:30px;
+  border: 0.5px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;  
+  height:55vh;  
+}
+hr{
+    background-color: #eee;
+  border: none;
+  height: 1px;
+}
+.shipping{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.sub{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-img{
+  width: 200px;
+  height: 200px;
+}
+@media screen and (max-width:648px) {
+ .cart-bottom{
+  display: flex;
+  flex-direction: column;
+ }
+ .cart-img{
+  width: 150px;  
+ }
+ .cart-pro{  
+  width: 100%;
+  overflow: hidden;
+display: flex;
+flex-direction: column;
+align-items: center;
+ }
+ .pricede{
+  margin-top: 20px;
+ }
+}

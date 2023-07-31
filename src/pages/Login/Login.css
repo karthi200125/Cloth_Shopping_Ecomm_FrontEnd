@@ -1,0 +1,84 @@
+.login{
+    width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+      center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-wrapper{
+    width: 25%;
+  padding: 20px;
+  background-color: white;
+}
+.logintitle{
+    font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+}
+.loginform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loginform input{
+    flex: 1;
+    width: 300px;
+  min-width: 40%;
+  margin: 10px 0;
+  padding: 10px;
+}
+.loginform button{
+    width: 40%;
+  border: 1px solid teal;
+  padding: 15px 20px;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+
+}
+.loginform button:disabled{
+    color: green;
+    cursor: not-allowed;
+  }
+.loginform button:hover{
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+}
+.reg-navi{
+  color: red;
+}
+.err{
+color: red;
+}
+.fp{
+    color: blue;
+    display: flex;
+    justify-content: end;
+    margin: 10px 10px 10px;
+}
+@media screen and (max-width : 648px){
+  .login{
+    width: 100%;
+  }
+  .login-wrapper{
+    width: 300px;
+    height: 400px;
+  }
+  .loginform input{
+    width: 250px;
+    margin-top: 20px;
+  }
+  .loginform button{
+    margin-top: 30px;
+  }
+  
+}

@@ -1,0 +1,12 @@
+.cat-item-container{
+    display: flex;
+  padding: 20px;
+  justify-content: space-between;
+ align-items: center;
+}
+@media screen and (max-width:648px) {
+  .cat-item-container{
+    display: flex;
+    flex-direction: column;    
+  }
+}

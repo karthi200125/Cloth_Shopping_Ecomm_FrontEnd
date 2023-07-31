@@ -1,0 +1,61 @@
+.cat-2-container {
+    flex: 1;
+    margin: 3px;
+    height: 70vh;
+    position: relative;    
+  }
+  .cat-2-container:hover .cat-2-image{
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+  .img-con{        
+    overflow: hidden;
+  }
+  .cat-2-image {
+    width: 390px;
+    height: 450px;
+    object-fit: cover;
+    
+  }
+  
+  .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title {
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .cat-button {
+    border: none;
+    padding: 10px;
+    background-color: white;
+    color: gray;
+    cursor: pointer;
+    font-weight: 600;    
+  }
+  .cat-button:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+    transition: 0.6s;
+  }
+  @media screen and (max-width:648px) {
+     .cat-2-container{
+      width: 350px;
+     }    
+     .img-con{
+      width: 350px;
+      height: 100px;      
+      margin-top: 10px;
+     }     
+  }

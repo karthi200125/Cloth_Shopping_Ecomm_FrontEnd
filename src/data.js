@@ -5,24 +5,26 @@ import kid from '../assets/kid.jpg'
 export const sliderItems = [
     {
       id: 1,
-      img: slide1,
-      title: "SUMMER SALE",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "f5fafd",
+      img: "https://assets.ajio.com/cms/AJIO/WEB/25082023-WHP-D-mainbanner-p5-max-under999.jpg",      
     },
     {
       id: 2,
-      img: "https://i.ibb.co/DG69bQ4/2.png",
-      title: "AUTUMN COLLECTION",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "fcf1ed",
+      img: "https://assets.ajio.com/cms/AJIO/WEB/25082023-mhp-d-main-p2-budajeans-leecooper-upto50.jpg",      
     },
     {
       id: 3,
-      img: "https://i.ibb.co/cXFnLLV/3.png",
-      title: "LOUNGEWEAR LOVE",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "fbf0f4",
+      img: "https://assets.ajio.com/cms/AJIO/WEB/25082023-mhp-d-main-p3-dnmx-netplay-under499.jpg",            
+    },{
+      id:4,
+      img:"https://img.faballey.com/images/catbanner/banner/19479bb2-f5a2-489d-bc54-5a21282b17da.jpg",
+    },
+    {
+      id: 5,
+      img: "https://assets.ajio.com/cms/AJIO/WEB/25082023-WHP-D-dailybanner-bu-p3-marks&spencer-forevernew-upto50.jpg",      
+    },
+    {
+      id: 6,
+      img: "https://assets.ajio.com/cms/AJIO/WEB/25082023-WHP-D-dailybanner-bu-p5-satrani-sareemall-flat60.jpg",      
     },
   ];
 

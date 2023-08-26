@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MdClose } from "react-icons/md";
 import "./Search.css";
 import axios from "axios";
@@ -6,23 +6,35 @@ import Navbar from "../Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 
 const Search = () => {
-  const [searchResults, setSearchResults] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [query, setQuery] = useState("");
   const [showSearchModal, setShowSearchModal] = useState(true);
-const naviagte=useNavigate()
-  const handleSearch = async (query) => {
-    try {
-      setQuery(query); // Save the query in state
-      const response = await axios.get(`/search?q=${query}`);
-      setSearchResults(response.data);
-    } catch (error) {
-      console.error("Error fetching search results:", error);
-    }
-  };
+  
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const searchProducts = async () => {
+      try {
+        const res = await axios.get("https://mern-ecom-api-y5yo.onrender.com/api/products");
+        setProducts(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    searchProducts();
+  }, []);
+
+  useEffect(() => {
+    const filtered = products.filter(item => 
+      item.title.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredProducts(filtered);
+  }, [query, products]);
 
   const handleClose = () => {
-    setShowSearchModal(false); 
-    naviagte("/home")
+    setShowSearchModal(false);
+    navigate("/home");
   };
 
   return (
@@ -36,30 +48,24 @@ const naviagte=useNavigate()
               type="text"
               placeholder="Search for products"
               value={query}
-              onChange={(e) => handleSearch(e.target.value)}
+              onChange={(e) => setQuery(e.target.value)}
             />
             <MdClose className="close-btn" onClick={handleClose} />
           </div>
           <div className="search-result-content">
-            {searchResults.length === 0 ? (
-              <div className="start-msg">
-                Start typing to see products you are looking for.
-              </div>
-            ) : (
-              <div className="search-results">
-                {searchResults.map((product) => (
-                  <div key={product._id} className="search-result-item">
-                    <div className="image-container">
-                      <img src={product.img} alt="Product" />
-                    </div>
-                    <div className="prod-details">
-                      <span className="name">{product.title}</span>
-                      <span className="desc">{product.desc}</span>
-                    </div>
+            <div className="search-results">
+              {filteredProducts.map((filter) => (
+                <div className="search-result-item" key={filter.id}>
+                  <div className="image-container">
+                    <img src={filter.img} alt="Product" />
                   </div>
-                ))}
-              </div>
-            )}
+                  <div className="prod-details">
+                    <span className="name">{filter.title}</span>
+                    <span className="desc">{filter.desc}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}

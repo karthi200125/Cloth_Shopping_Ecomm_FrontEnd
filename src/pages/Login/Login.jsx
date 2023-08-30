@@ -12,6 +12,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const { isFetching, error } = useSelector((state) => state.user);
+  const [err,seterr]=useState("")
 
   const navigate = useNavigate();
 
@@ -24,12 +25,14 @@ const Login = () => {
     try {
       await login(dispatch, { username, password });
       navigate("/home");
-    } catch (error) {
-      console.error(error);
+    } catch (error) {      
+      seterr("UserName Or Password Wrong")
     }finally{
       setIsLoading(false);
     }
   };
+
+
 
   return (
     <div className="login">
@@ -40,17 +43,18 @@ const Login = () => {
           <input
             placeholder="username"
             onChange={(e) => setUsername(e.target.value)}
+            required
           />
           <input
             placeholder="password"
             type="password"
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
           <button onClick={handleClick} disabled={isLoading}>
             {isLoading ? <span style={{color:'white'}}>Please Wait ...</span> : "Login"}
-          </button>
-          {error && <span className="err">wrong Username Or Password</span>}
-          <span className="fp">Forget password?</span>          
+          </button>                    
+          {err && <span className="err">wrong Username Or Password</span>}
           <span>create a new account 
           <Link to="/register"style={{textDecoration:'none',marginLeft:'10px'}} >
           <span className="reg-navi">Register</span>

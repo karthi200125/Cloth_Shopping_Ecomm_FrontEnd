@@ -13,9 +13,9 @@ const Register = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-  
+    console.log(username,email,password)  
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/register", {
+      const response = await axios.post("https://mern-ecom-api-y5yo.onrender.com/api/auth/register", {
         username,
         email,
         password,
@@ -29,25 +29,32 @@ const Register = () => {
   };
   
 
+
   return (
     <div className="register">
       <div className="register-wrapper">        
         <form className="regform"onSubmit={handleRegister}>
         <span className="regtitle">CREATE AN ACCOUNT</span>
           <input
+          type="text"
             placeholder="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            required
           />
           <input
+          type="email"
             placeholder="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
           <input
             placeholder="password"
+            type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
           <p style={{fontSize:'10px',margin : '10px 10px 10px'}}>
             By creating an account, I consent to the processing of my personal

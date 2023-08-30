@@ -21,6 +21,24 @@
   color: black;
   border: 1px solid black;
 }
+.cart-remove{
+ color: red; 
+ font-size: 20px;
+ font-weight: 800;
+ position: absolute;
+ right: 5%;
+ background-color: transparent;
+ padding: 10px;
+ cursor: pointer;
+}
+.cart-remove:hover{
+ background-color: black;
+  color: white;
+}
+.clearcart:hover{
+background-color: black;
+color: white;
+}
 .cart-top button.filled {
     background-color: black;
     color: white;    
@@ -37,7 +55,8 @@
 }
 .cart-pro{
     display: flex;
-  justify-content: space-between;    
+  justify-content: space-between; 
+  position: relative;   
 }
 .cart-pro-de{
     flex: 2;

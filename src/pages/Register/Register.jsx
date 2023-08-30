@@ -31,9 +31,9 @@ const Register = () => {
 
   return (
     <div className="register">
-      <div className="register-wrapper">
-        <span className="regtitle">CREATE AN ACCOUNT</span>
+      <div className="register-wrapper">        
         <form className="regform"onSubmit={handleRegister}>
+        <span className="regtitle">CREATE AN ACCOUNT</span>
           <input
             placeholder="username"
             value={username}
@@ -54,9 +54,9 @@ const Register = () => {
             data in accordance with the <b>PRIVACY POLICY</b>
           </p>
           <button type="submit">CREATE</button>
-          <span>Do you have Accoutn 
-            <Link to="/">
-            <span style={{color:'red'}}>Login</span>
+          <span>Do you have Account 
+            <Link to="/" style={{textDecoration:'none'}}>
+            <span style={{color:'red'}}>  Login</span>
             </Link>
           </span>
         </form>

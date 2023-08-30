@@ -2,7 +2,13 @@
     display: flex;
   padding: 20px;
   justify-content: space-between;
- align-items: center;
+ align-items: center; 
+}
+.cat-name{
+ margin-top: 30px;
+ margin-left: 50px; 
+ color: blueviolet;
+ font-weight: 900;
 }
 @media screen and (max-width:648px) {
   .cat-item-container{

@@ -6,7 +6,8 @@ import './Cart.css'
 import StripeCheckout from "react-stripe-checkout";
 import stripelogo from '../../../assets/logo.png';
 import { userRequest } from "../../requestMethods";
-import { useSelector } from "react-redux";
+import { useSelector , useDispatch } from "react-redux";
+import { clearCart ,removeProduct} from "../../redux/cartRedux";
 
 const KEY="pk_test_51NFWIoSHZMAO9ZiqEsCXCRsefCHjPc7PEIPcvPFd3adADiSK4JlWpPGFvVvVwVsHNp3FalSPnuC5sjTfzu4wrkqX00w6xOXVEF"
 
@@ -14,7 +15,7 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const [stripeToken, setStripeToken] = useState(null);
   const navigate = useNavigate();
-
+  const dispatch = useDispatch();
   
   const onToken = (token) => {
     setStripeToken(token);
@@ -35,20 +36,31 @@ const Cart = () => {
     stripeToken && makeRequest();
   }, [stripeToken, cart.total, navigate]);
 
+  const removelcick = (product) => { 
+    dispatch(removeProduct(product)); 
+  };
+  const clearfullCart = (product) => { 
+    dispatch(clearCart(product)); 
+  };
+   console.log("from cat",cart.quantity)
+
 
   return (
     <div className="cart-con">
       <Navbar />      
       <div className="cart-wrapper">
-        <h1>YOUR BAG</h1>
+        {cart.quantity > 0 ? <h1>{`You Have ${cart.quantity} Items in cart`}</h1>: <h1>Your Cart Is Empty</h1> }        
         <div className="cart-top">
-          <button>CONTINUE SHOPPING</button>          
-          <button type="filled">CHECKOUT NOW</button>
+          <button>CONTINUE SHOPPING</button>    
+          
+             <button className="clearcart" onClick={()=>clearfullCart(cart.products)}>CLEAR CART</button>
+          
+          
         </div>        
         <div className="cart-bottom">
           <div style={{flex: '3'}} className="procart">            
-          {cart.products.map((product) => (
-            <div className="cart-pro">
+          {cart.products.map((product) => (            
+            <div className="cart-pro" key={product._id}>
               <div className="cart-pro-de">
               <img className="cart-img" src={product.img} />
                 <div className="detail">
@@ -64,6 +76,7 @@ const Cart = () => {
                   
                 </div>
               </div>
+              <span onClick={() => removelcick(product)} className="cart-remove">X</span>
               <div className="pricede">
                 <div>                
                   <span style={{fontSize : '30px'}}>Quantity : {product.quantity}</span>                                    
@@ -76,6 +89,7 @@ const Cart = () => {
             ))}                                    
             <hr />            
           </div>
+
           <div className="sum">
             <span style={{fontWeight: "200"}}>ORDER SUMMARY</span>
             <div className="si shipping">

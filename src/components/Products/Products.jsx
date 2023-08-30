@@ -59,6 +59,8 @@ const Products = ({ cat, filters, sort }) => {
 
 
   return (
+    <>
+    <h1 className="re-pro">Recent Products</h1>
     <div className="pros-container">      
       {cat
         ? filteredProducts.map((item) => <Product item={item} key={item.id} />)
@@ -66,6 +68,7 @@ const Products = ({ cat, filters, sort }) => {
             .slice(0, 8)
             .map((item) => <Product item={item} key={item.id} />)}
     </div>
+    </>
   );
 };
 

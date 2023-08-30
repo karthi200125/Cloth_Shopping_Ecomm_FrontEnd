@@ -8,6 +8,7 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import Newsletter from "../../components/Newsletter/Newsletter";
 import './Product.css'
+import Products from "../../components/Products/Products";
 
 const FilterColor = ({ color, onClick }) => (
   <div
@@ -104,6 +105,7 @@ const Product = () => {
           </div>
         </div>
       </div>
+      <Products/>
       <Newsletter />
       <Footer />
     </div>

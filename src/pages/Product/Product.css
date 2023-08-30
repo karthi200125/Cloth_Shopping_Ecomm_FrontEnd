@@ -5,6 +5,9 @@
 .single-img-con{
     flex: 1;
 }
+.single-info-con h1{
+  line-height: 1;
+}
 .single-img-con img{
     width: 100%;
     height: 90vh;

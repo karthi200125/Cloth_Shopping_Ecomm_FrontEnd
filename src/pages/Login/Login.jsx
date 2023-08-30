@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom'
 
 
 const Login = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
@@ -16,19 +17,26 @@ const Login = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
+    if (isLoading) {
+      return; 
+    }
+    setIsLoading(true);
     try {
       await login(dispatch, { username, password });
       navigate("/home");
     } catch (error) {
       console.error(error);
+    }finally{
+      setIsLoading(false);
     }
   };
 
   return (
     <div className="login">
       <div className="login-wrapper">
-        <span className="logintitle">SIGN IN</span>
+        
         <form className="loginform">
+        <span className="logintitle">SIGN IN</span>
           <input
             placeholder="username"
             onChange={(e) => setUsername(e.target.value)}
@@ -38,8 +46,8 @@ const Login = () => {
             type="password"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button onClick={handleClick} >
-            LOGIN
+          <button onClick={handleClick} disabled={isLoading}>
+            {isLoading ? <span style={{color:'white'}}>Please Wait ...</span> : "Login"}
           </button>
           {error && <span className="err">wrong Username Or Password</span>}
           <span className="fp">Forget password?</span>          

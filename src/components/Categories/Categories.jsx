@@ -5,11 +5,14 @@ import './Categories.css'
 const Categories = () => {
   
   return (
-    <div className="cat-item-container" >
+    <>
+    <h1 className="cat-name">CATEGORIES</h1>
+    <div className="cat-item-container" >      
       {categories.map((item) => (
         <CategoryItem item={item} key={item.id} />
       ))}
     </div>
+    </>
   );
 };
 

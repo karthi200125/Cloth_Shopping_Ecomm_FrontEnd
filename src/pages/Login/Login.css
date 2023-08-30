@@ -20,7 +20,7 @@
 .logintitle{
     font-size: 24px;
   font-weight: 300;
-  text-align: center;
+  text-align: center;    
 }
 .loginform{
     display: flex;

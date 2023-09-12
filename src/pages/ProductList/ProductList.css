@@ -12,13 +12,40 @@ h2{
     margin: 20px;
     align-items: center;
 }
-@media screen and (max-width:648px) {
+.pl-cat-name{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    text-align: center;    
+}
+.con{
+    display: flex;
+    flex-direction: row;    
+}
+.con select{
+    padding: 10px;
+   }
+@media screen and (max-width:767px) {
    .select-con{
     display: flex;
     flex-direction: column;
     gap: 10px;    
     width: 250px;
-    align-items: center;
+    align-items: center;        
+   }
+   .c-s h1{
+    font-size: 20px
+   }
+   .con{
+    display: flex;
+    flex-direction:row;
+   }
+   .c-s{
+    display: flex;
+    flex-direction: column;
+   }
+   .con select{
+    padding: 10px;
    }
   }
 

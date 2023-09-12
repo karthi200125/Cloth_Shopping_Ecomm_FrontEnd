@@ -1,7 +1,6 @@
 import {MdFavoriteBorder} from 'react-icons/md'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {BiShoppingBag} from 'react-icons/bi'
-import styled from "styled-components";
 import {Link} from 'react-router-dom'
 import './Product.css'
 
@@ -12,11 +11,11 @@ const Product = ({item}) => {
       <img src={item.img} alt="" style={{ height: '90%', zIndex: 2 }} className='cat-pro'/>
       <div className='pro-info'>
         <div className='pro-icon'>
-          <BiShoppingBag/>          
+        <AiOutlineSearch/>
           </div>
         <div className='pro-icon'>
         <Link to={`/product/${item._id}`}>
-          <AiOutlineSearch />
+        <BiShoppingBag/>          
           </Link>          
           </div>
         <div className='pro-icon'>

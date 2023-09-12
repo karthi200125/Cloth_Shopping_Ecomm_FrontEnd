@@ -62,7 +62,7 @@
   margin: 0px 5px;
 }
 .single-btn{
-    outline: 0;
+outline: 0;
 border: 0;
 height: 50px;
 width: 180px;
@@ -81,44 +81,55 @@ flex-grow: 1;
     color: white;
     border : none;
 }
-@media screen and (max-width:648px) {
+@media screen and (max-width:767px) {
  .single-wrap{
   display: flex;
   flex-direction: column;
- }
- .single-img-con{
-  width: 300px;  
- }
+  align-items: center;    
+ } 
  .single-img-con img{
-  width: 300px;
-  height: 350px;
+  width: 100%;
  } 
  .single-info-con{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;  
  }
  .single-info-con h1{
-  font-size: 34px;
-  margin-top: 10px;  
-  width: 300px;
-  text-align: center;
+  font-size: 25px;  
+  width: 100%;
+  text-align: center;  
  }
  .single-info-con p{
-  text-align: center;
+  width: 100%;  
+  font-size: 15px;
  }
  .single-filter{
    margin-left: -30px;   
  }
  .single-file-con{
-  width: 200px;  
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  width: 100%;
+  gap: 10px;  
+  
  }
- .single-add{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+ .single-add{  
+  gap:10px;    
+  width: 100%;
  }
+ .single-btn{  
+  width: max-content;
+ }
+ 
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  
+  .single-img-con img{
+    height: 100%;
+    width: 100%;
+  }
+  .single-add{  
+  width: 100%;
+  }
 }

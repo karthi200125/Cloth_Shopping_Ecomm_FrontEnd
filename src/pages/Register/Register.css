@@ -17,6 +17,28 @@
   padding: 20px;
   background-color: white;
 }
+.password{
+display: flex;
+flex-direction: row;
+align-items: center;
+width: 100%;
+justify-content: space-between;
+margin: 10px 0;
+  padding-right: 5px;
+  border: 1px solid hsl(0, 0%, 0%);
+  padding: 4px;  
+}
+.password>:nth-child(2){
+  cursor: pointer;
+}
+.passinput{
+  border: none;  
+  width: 100%;  
+  padding: 10px;  
+}
+.passinput:focus{
+  outline: none;
+}
 .regtitle{
     font-size: 24px;
   font-weight: 300;
@@ -27,12 +49,13 @@
     flex-direction: column;
     align-items: center;
 }
-.regform input{
+.regform .input{
     flex: 1;
-    width: 300px;
+    width: 100%;
   min-width: 40%;
   margin: 10px 0;
   padding: 10px;
+  border: 1px solid black;
 }
 .regform button{
     width: 40%;
@@ -46,27 +69,39 @@
 }
 .regform button:disabled{
     color: green;
-    cursor: not-allowed;
+    cursor: not-allowed;    
   }
 .regform button:hover{
     background-color: transparent;
     border: 2px solid black;
-    color: black;
+    color: black;    
 }
-@media screen and (max-width : 648px){
+@media screen and (max-width : 767px){
   .register{
     width: 100%;
   }
   .register-wrapper{
-    width: 300px;
-    height: 500px;
+    width: 60%;
+    height: max-content;
   }
   .regform input{
-    width: 250px;
-    margin-top: 20px;
+    width: 100%;        
   }
   .regform button{
     margin-top: 30px;
   }
+  .regform .input{
+    width: 100%;
+  }
   
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .register-wrapper{  
+    width: 45%;
+    height: max-content;
+  }
+  .loginform input{
+    width: 100%;
+  }
+  
+  }

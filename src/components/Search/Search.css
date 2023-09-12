@@ -78,6 +78,10 @@
     padding: 10px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    
+  }
+  .search-result-item:hover{
+    background-color: rgba(0, 0, 0, 0.072);
   }
   
   .search-result-item .image-container {

@@ -21,18 +21,29 @@
   color: black;
   border: 1px solid black;
 }
+.cart-top button:hover{
+  background-color: black;
+  color: white;
+}
+.dis{
+  cursor: none !important;
+  padding: 10px;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 600;
+}
 .cart-remove{
- color: red; 
+ color: black; 
  font-size: 20px;
  font-weight: 800;
  position: absolute;
- right: 5%;
+ right: 0;
  background-color: transparent;
  padding: 10px;
  cursor: pointer;
 }
 .cart-remove:hover{
- background-color: black;
+ background-color: red;
   color: white;
 }
 .clearcart:hover{
@@ -56,7 +67,13 @@ color: white;
 .cart-pro{
     display: flex;
   justify-content: space-between; 
-  position: relative;   
+  position: relative;     
+  border: 1px solid rgba(128, 128, 128, 0.322);  
+  cursor: pointer;
+  width: 97%;  
+}
+.cart-pro:hover{
+  background-color: rgba(0, 0, 0, 0.11);
 }
 .cart-pro-de{
     flex: 2;
@@ -66,8 +83,18 @@ color: white;
     padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  
+  justify-content: space-around;  
+}
+.detail span{
+   font-size: 25px;
+   line-height: 30px;
+}
+.cart-quantity{
+  font-size: 20px;
+  color: gray;
+}
+.cart-quantity span{
+  color: black;
 }
 .cart-pro-color{
     width: 20px;
@@ -125,11 +152,14 @@ hr{
 .cart-img{
   width: 200px;
   height: 200px;
+  margin: 15px;  
+  object-fit: contain;
 }
-@media screen and (max-width:648px) {
+@media screen and (max-width:767px) {
  .cart-bottom{
   display: flex;
   flex-direction: column;
+  justify-content: center;
  }
  .cart-img{
   width: 150px;  
@@ -142,6 +172,19 @@ flex-direction: column;
 align-items: center;
  }
  .pricede{
-  margin-top: 20px;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;  
  }
+ .detail span{
+  font-size: 20px;
+ }
+ 
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .cart-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
 }

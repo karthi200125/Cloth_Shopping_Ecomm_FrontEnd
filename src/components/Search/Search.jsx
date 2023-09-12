@@ -3,7 +3,7 @@ import { MdClose } from "react-icons/md";
 import "./Search.css";
 import axios from "axios";
 import Navbar from "../Navbar/Navbar";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Search = () => {
   const [products, setProducts] = useState([]);
@@ -54,7 +54,9 @@ const Search = () => {
           </div>
           <div className="search-result-content">
             <div className="search-results">
+
               {filteredProducts.map((filter) => (
+                <Link to={`/product/${filter._id}`} style={{textDecoration:'none'}}>
                 <div className="search-result-item" key={filter.id}>
                   <div className="image-container">
                     <img src={filter.img} alt="Product" />
@@ -64,7 +66,9 @@ const Search = () => {
                     <span className="desc">{filter.desc}</span>
                   </div>
                 </div>
+                </Link>
               ))}
+
             </div>
           </div>
         </div>

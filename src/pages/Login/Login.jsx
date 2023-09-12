@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import './Login.css'
 import {Link} from 'react-router-dom'
+import {FaEye, FaEyeSlash} from 'react-icons/fa'
 
 
 const Login = () => {
@@ -13,6 +14,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const { isFetching, error } = useSelector((state) => state.user);
   const [err,seterr]=useState("")
+  const [showpassword, setshowPassword] = useState(false);
 
   const navigate = useNavigate();
 
@@ -40,17 +42,23 @@ const Login = () => {
         
         <form className="loginform">
         <span className="logintitle">SIGN IN</span>
-          <input
+          <input className="input"
             placeholder="username"
             onChange={(e) => setUsername(e.target.value)}
             required
           />
-          <input
+          <div className="lpassword">
+          <input className="passinput"
             placeholder="password"
-            type="password"
+            type={showpassword ? "text" : "password"}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
+          {showpassword ? 
+          <FaEye onClick={() =>setshowPassword(!showpassword)} size={20}/>          
+           : <FaEyeSlash onClick={() =>setshowPassword(!showpassword)} size={20}/>          
+           }
+          </div>
           <button onClick={handleClick} disabled={isLoading}>
             {isLoading ? <span style={{color:'white'}}>Please Wait ...</span> : "Login"}
           </button>                    

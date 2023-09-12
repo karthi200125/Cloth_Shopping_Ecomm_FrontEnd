@@ -28,11 +28,12 @@ const ProductList = () => {
     <div>
       <Navbar />
       
-      <h1 style={{margin: '20px'}}>{cat}</h1>
+      <h1 className="pl-cat-name">{cat}</h1>
       <div className="pl-fil-con">
-        <div className="select-con">
+        <div className="select-con c-s">
           <h2>Filter Products:</h2>
-          <select style={{padding:'10px'}}name="color" onChange={handleFilters}>
+          <div className="con">
+          <select name="color" onChange={handleFilters}>
             <option disabled selected>Color</option>
             <option >white</option>
             <option>black</option>
@@ -41,7 +42,7 @@ const ProductList = () => {
             <option>yellow</option>
             <option>green</option>
           </select>
-          <select style={{padding:'10px',margin:'10px'}}name="size" onChange={handleFilters}>
+          <select name="size" onChange={handleFilters}>
             <option disabled selected>
               Size
             </option>
@@ -51,6 +52,7 @@ const ProductList = () => {
             <option>L</option>
             <option>XL</option>
           </select>
+          </div>
         </div>
         <div className="select-con">
           <h2>Sort Products:</h2>

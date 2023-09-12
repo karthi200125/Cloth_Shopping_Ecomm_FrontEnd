@@ -16,4 +16,39 @@
     font-family: "Cabin", sans-serif;
   }
       
+  .heading {
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    position: relative;    
+  }
   
+  .heading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: .1rem;
+    width: 100%;
+    background: #aaa;
+    z-index: -1;
+  }
+  
+  .heading span {
+    font-size: 3rem;    
+    color: #12d8fa;
+    background: #000;
+    padding: .5rem 1.5rem;
+    border: 0.1rem solid #aaa;
+    border-radius: .5rem;
+  }
+
+  @media screen and (max-width : 767px){
+    .heading span {
+      font-size: 20px;
+    }
+  }
+  @media screen and (min-width : 768px) and (max-width : 1023px){
+    
+  }

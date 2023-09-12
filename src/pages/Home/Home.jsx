@@ -12,7 +12,9 @@ const Home = () => {
     <div>            
       <Navbar />
       <Slider />
+      <h1 className="heading"><span>CATEGORIES</span></h1>
       <Categories />
+      <h1 className="re-pro heading"><span>Recent Products</span></h1>
       <Products/>
       <Newsletter/>
       <Footer/>

@@ -100,5 +100,23 @@ col span .text{
     .bottom-bar-content{
         display: flex;
         flex-direction: column;
-        margin-bottom: 20px;    }
+        margin-bottom: 20px; 
+    }
+    .cat , .pages , .about , .contact{        
+        text-align: center;
+    }
+    .ft{
+        width: 100%;
+        text-align: center;
+    }
+    .c-item{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+    }
+    .env{
+        display: none;
+    }
+    
 }

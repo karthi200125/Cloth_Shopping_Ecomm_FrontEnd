@@ -74,6 +74,7 @@ const Cart = () => {
 
             {cart.products.map((product) => (
               <div className="cart-pro" key={product._id}>
+                
                 <div className="cart-pro-de">
                   <img className="cart-img" src={product.img} />
                   <div className="detail">
@@ -82,15 +83,17 @@ const Cart = () => {
                     <b>Size: {product.size ? product.size : <span style={{ color: 'red', fontSize: '15px' }}>Select size</span>}</b>
                   </div>
                 </div>
+
                 <span onClick={() => removelcick(product)} className="cart-remove">X</span>
                 <div className="pricede">
                   <div>
                     <p className="cart-quantity">Quantity : <span>{product.quantity}</span></p>
                   </div>
-                  <span style={{ fontSize: '30px' }}>
+                  <span style={{ fontSize: '20px' }}>
                     RS.{product.price * product.quantity}
                   </span>
                 </div>
+
               </div>
 
             ))}

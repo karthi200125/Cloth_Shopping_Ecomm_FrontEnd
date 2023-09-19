@@ -60,7 +60,7 @@ const Login = () => {
            }
           </div>
           <button onClick={handleClick} disabled={isLoading}>
-            {isLoading ? <span style={{color:'white'}}>Please Wait ...</span> : "Login"}
+            {isLoading ? <span className="p-w">Please Wait ...</span> : "Login"}
           </button>                    
           {err && <span className="err">wrong Username Or Password</span>}
           <span>create a new account 

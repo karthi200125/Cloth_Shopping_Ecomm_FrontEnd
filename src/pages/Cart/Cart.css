@@ -167,17 +167,50 @@ hr{
  .cart-pro{  
   width: 100%;
   overflow: hidden;
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
  }
- .pricede{
-  position: absolute;
-  right: 5%;
-  bottom: 5%;  
+ .pricede{      
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid gray;
+  padding: 5px;
+ }
+ .cart-quantity {
+  font-size: 15px;
+ }
+ .cart-quantity span{
+  font-size: 30px;
+ }
+ .cart-wrapper h1{
+  font-size: 25px;
+ }
+ .cart-top button{
+  font-size: 10px;
+ }
+ .pricede span{
+  font-size: 10px;
+ }
+ .cart-top{
+  gap: 15px;
+ }
+ .cart-pro-de{      
+      width: 100%;
+ }
+ .cart-pro-de img{
+  width: 60px;
+  height: 60px;  
+ }
+ .detail{
+  gap: 5px;  
+  width: 100%;
  }
  .detail span{
-  font-size: 20px;
+  font-size: 15px;
+  overflow: hidden;
+  width: 100%;
  }
  
 }

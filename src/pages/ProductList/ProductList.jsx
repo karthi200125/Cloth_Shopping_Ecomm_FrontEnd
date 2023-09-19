@@ -58,8 +58,8 @@ const ProductList = () => {
           <h2>Sort Products:</h2>
           <select style={{padding:'10px'}} onChange={(e) => setSort(e.target.value)}>
             <option value="newest">Newest</option>
-            <option value="asc">Price (asc)</option>
-            <option value="desc">Price (desc)</option>
+            <option value="asc">Lowest Price</option>
+            <option value="desc">Highest Price</option>
           </select>
         </div>
       </div>

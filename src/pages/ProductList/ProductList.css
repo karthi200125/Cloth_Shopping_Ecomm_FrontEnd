@@ -29,20 +29,28 @@ h2{
    .select-con{
     display: flex;
     flex-direction: column;
-    gap: 10px;    
+    gap: 5px;    
     width: 250px;
     align-items: center;        
    }
-   .c-s h1{
-    font-size: 20px
-   }
-   .con{
-    display: flex;
-    flex-direction:row;
-   }
-   .c-s{
+   .pl-fil-con{    
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+   .c-s h2{
+    font-size: 20px
+   }
+
+   .c-s{
+    display: flex;
+    flex-direction: column;    
+   }
+   .c-s .con{
+    display: flex;
+    flex-direction:row;
+    gap: 10px;    
    }
    .con select{
     padding: 10px;

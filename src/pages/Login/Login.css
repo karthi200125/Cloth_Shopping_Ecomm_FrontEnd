@@ -51,14 +51,19 @@ height: 40px;
     padding: 10px;
 }
 .loginform button{
-    width: 40%;
+    width: max-content;
   border: 1px solid teal;
   padding: 15px 20px;
   background-color: teal;
   color: white;
   cursor: pointer;
   margin-bottom: 10px;
-
+}
+.p-w{
+  color: black;
+}
+.p-w:hover{
+  color: black;
 }
 .loginform button:disabled{
     color: green;
@@ -86,11 +91,11 @@ color: red;
     width: 100%;
   }
   .login-wrapper{
-    width: 300px;
+    width: 90%;
     height: 400px;
   }
   .loginform input{
-    width: 250px;
+    width: 100%;
     margin-top: 20px;
   }
   .loginform button{

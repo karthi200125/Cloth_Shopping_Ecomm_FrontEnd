@@ -79,6 +79,7 @@ col span .text{
     overflow: hidden;
     
 }
+
 .bottom-bar {
     border-top: 2px solid rgba(0, 0, 0, 0.1);
 }
@@ -95,7 +96,7 @@ col span .text{
     font-size: 12px;
     color: rgba(0, 0, 0, 0.5);
 }
-@media screen and (max-width:648px) {
+@media screen and (max-width:767px) {
     .bottom-bar-content{
         display: flex;
         flex-direction: column;

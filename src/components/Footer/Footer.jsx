@@ -16,6 +16,7 @@ const Footer = () => {
                         ipsa quae ab illo.
                     </div>
                 </div>
+                
                 <div className="contact" >
                     <div className="ft">Contact</div>
                     <div className="c-item">
@@ -33,6 +34,7 @@ const Footer = () => {
                         <div className="text1">Email: skarthikeyan25052001@gmail.com</div>
                     </div>
                 </div>
+
                 <div className="col cat">
                     <div className="ft">Products</div>
                     <span className="text">Shirts</span>

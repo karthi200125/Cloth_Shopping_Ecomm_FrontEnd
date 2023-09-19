@@ -16,7 +16,7 @@ const Footer = () => {
                         ipsa quae ab illo.
                     </div>
                 </div>
-                <div className="col con" >
+                <div className="contact" >
                     <div className="ft">Contact</div>
                     <div className="c-item">
                         <FaLocationArrow />
